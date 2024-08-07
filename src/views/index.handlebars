@@ -12,9 +12,10 @@
     <ul>
         {{#each filmes}}
             <li>
-                <h3>{{this.Title}} ({{this.Year}})</h3>
+                <h3>
+                    <a href="/filmes/{{this.imdbID}}">{{this.Title}} ({{this.Year}})</a>
+                </h3>
                 <p><img src="{{this.Poster}}" alt="Capa do filme {{this.Title}}" width="100"></p>
-                <p><a href="/filmes/{{this.imdbID}}"></a></p>
             </li>
         {{/each}}
     </ul>
