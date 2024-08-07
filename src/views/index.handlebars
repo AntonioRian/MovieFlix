@@ -1,0 +1,21 @@
+<h1>Filmes e avaliações</h1>
+<form action="/filmes/pesquisar" method="get">
+    <input type="text" name="filme" placeholder="Nome do filme que deseja buscar">
+    <button type="submit">Pesquisar</button>
+</form>
+{{#if error}}
+    <p>{{error}}</p>
+{{/if}}
+
+{{#if filmes}}
+    <h2>Resultados da pesquisa:</h2>
+    <ul>
+        {{#each filmes}}
+            <li>
+                <h3>{{this.Title}} ({{this.Year}})</h3>
+                <p><img src="{{this.Poster}}" alt="Capa do filme {{this.Title}}" width="100"></p>
+                <p><a href="/filmes/{{this.imdbID}}"></a></p>
+            </li>
+        {{/each}}
+    </ul>
+{{/if}}
