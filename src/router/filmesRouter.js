@@ -7,10 +7,17 @@ const chaveAPI = 'd6eef64b';
 // Rota para buscar filmes
 router.get('/pesquisar', async (req, res) => {
     const filme = req.query.filme;
+    const regex = /^[a-zA-Z0-9\s]{3,}$/;
 
     if (!filme) {
         return res.render('index');
     }
+
+    if (!regex.test(filme)) {
+    return res.render('index', { error: 'O nome do filme deve conter apenas letras, números e espaços, com no mínimo 2 caracteres.' });
+    }
+
+    
 
     try {
         const response = await axios.get(`http://www.omdbapi.com/?s=${filme}&apikey=${chaveAPI}`);
