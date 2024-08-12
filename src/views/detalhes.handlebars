@@ -1,7 +1,34 @@
-<h1>{{filme.Title}}</h1>
-<img src="{{filme.Poster}}" alt="Capa do filme {{filme.Title}}" width="200">
-<p><strong>Ano: </strong> {{filme.Year}}</p>
-<p><strong>Sinopse: </strong> {{filme.Plot}}</p>
-<p><strong>Diretor: </strong> {{filme.Director}}</p>
-<p><strong>Elenco: </strong> {{filme.Actors}}</p>
-<p><strong>Avaliações do IMDB: </strong> {{filme.imdbRating}}</p>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{filme.Title}}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet", href="/src/public/css/style.css">
+</head>
+<body>
+<body class="bg-dark text-light"></body>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{{filme.Poster}}" alt="Capa do filme {{filme.Title}}" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-8">
+            <h1 class="mb-4">{{filme.Title}}</h1>
+            <ul class="list-unstyled">
+                <li><strong>Ano:</strong> {{filme.Year}}</li>
+                <li><strong>Sinopse:</strong> {{filme.Plot}}</li>
+                <li><strong>Diretor:</strong> {{filme.Director}}</li>
+                <li><strong>Elenco:</strong> {{filme.Actors}}</li>
+                <li><strong>Avaliações do IMDb:</strong> {{filme.imdbRating}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
