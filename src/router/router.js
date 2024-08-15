@@ -10,4 +10,9 @@ router.get('/', (req, res) => {
 // Encaminha as rotas que começam com '/filmes' para o roteador de filmes
 router.use('/filmes', filmesRouter);
 
+// Rota para a página de favoritos
+router.get('/favoritos', (req, res) => {
+    res.render('favoritos');
+});
+
 module.exports = router; // Exporta o roteador para uso em outros arquivos
