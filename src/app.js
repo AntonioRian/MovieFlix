@@ -11,6 +11,11 @@ app.engine('handlebars', engine({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.set('views', __dirname + '/views/');
 
+
+// Serve arquivos estáticos da pasta public
+app.use(express.static(__dirname + '/public'));
+
+
 // Usa o router definido no arquivo router/router.js
 app.use('/', router);
 
