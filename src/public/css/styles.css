@@ -3,3 +3,13 @@
     box-shadow: 0 4px 8px rgba(250, 101, 1, 0.952);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Ajuste conforme necessário */
+}
+
+.btn {
+    padding: 10px 20px;
+}
