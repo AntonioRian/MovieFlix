@@ -1,0 +1,21 @@
+.card {
+    height: 410px;
+    width: 250px; 
+}
+
+
+.card-img-top {
+    object-fit: cover;
+    height: 310px; 
+}
+
+
+.card-body {
+    height: calc(100% - 250px); 
+    overflow-y: auto; 
+}
+
+.card-body::-webkit-scrollbar {
+    display: none; 
+}
+

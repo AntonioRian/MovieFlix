@@ -1,5 +1,5 @@
 @import url("partials/navbar.css");
-  
+@import url("partials/cards.css");
 
 .button-container {
     display: flex;
