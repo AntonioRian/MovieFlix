@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{filme.Title}}</title>
@@ -6,28 +9,31 @@
 </head>
 <body>
 <body class="bg-dark text-light"></body>
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-3">
-            <img src="{{filme.Poster}}" alt="Capa do filme {{filme.Title}}" class="img-fluid rounded shadow">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="{{filme.Poster}}" alt="Capa do filme {{filme.Title}}" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-8">
+                <h1 class="mb-4">{{filme.Title}}</h1>
+                <ul class="list-unstyled">
+                    <li><strong>Ano:</strong> {{filme.Year}}</li>
+                    <li><strong>Sinopse:</strong> {{filme.Plot}}</li>
+                    <li><strong>Diretor:</strong> {{filme.Director}}</li>
+                    <li><strong>Elenco:</strong> {{filme.Actors}}</li>
+                    <li><strong>Avaliações do IMDb:</strong> {{filme.imdbRating}}</li>
+                </ul> <button id="favoriteBtn" class="btn btn-primary" data-id="{{filme.imdbID}}" data-title="{{filme.Title}}" data-poster="{{filme.Poster}}">
+                    Adicionar aos Favoritos
+                </button>
+            </div>
         </div>
-        <div class="col-md-8">
-            <h1 class="mb-4">{{filme.Title}}</h1>
-            <ul class="list-unstyled">
-                <li><strong>Ano:</strong> {{filme.Year}}</li>
-                <li><strong>Sinopse:</strong> {{filme.Plot}}</li>
-                <li><strong>Diretor:</strong> {{filme.Director}}</li>
-                <li><strong>Elenco:</strong> {{filme.Actors}}</li>
-                <li><strong>Avaliações do IMDb:</strong> {{filme.imdbRating}}</li>
-            </ul>
+        <div class="button-container">
+            <button class="btn btn-secondary mb-4" onclick="window.history.back()">Voltar</button>
         </div>
     </div>
-    <div class="button-container">
-    <button class="btn btn-secondary mb-4" onclick="window.history.back()">Voltar</button>
-</div>
-
-</div>
+    
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/favoritos.js"></script>
 </body>
 </html>
