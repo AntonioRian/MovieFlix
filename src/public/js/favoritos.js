@@ -14,7 +14,7 @@ function alternarFavorito() {
     const filmeId = this.dataset.id;
     const filmeTitulo = this.dataset.title;
     const filmePoster = this.dataset.poster;
-    const filmeAno = this.dataset.year; 
+    const filmeAno = this.dataset.year; // Obter o ano do filme
 
     let favoritos = JSON.parse(localStorage.getItem('favorites')) || [];
     const index = favoritos.findIndex(filme => filme.id === filmeId);
@@ -30,7 +30,6 @@ function alternarFavorito() {
     localStorage.setItem('favorites', JSON.stringify(favoritos));
     atualizarEstadoBotaoFavorito();
 }
-
 
 function atualizarEstadoBotaoFavorito() { 
     const botaoFavorito = document.getElementById('favoriteBtn');
