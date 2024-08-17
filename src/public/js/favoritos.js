@@ -56,7 +56,7 @@ function renderizarFavoritos() {
                 <div class="card">
                     <img src="${filme.poster}" class="card-img-top" alt="Capa do filme ${filme.title}">
                     <div class="card-body">
-                        <h5 class="card-title"> <a href="/filmes/${filme.id}" class="btn btn-primary">${filme.title} (${filme.year}) </a></h5>
+                        <h5 class="card-title"> <a href="/filmes/${filme.id}" class="text-dark">${filme.title} (${filme.year}) </a></h5>
                     </div>
                 </div>
             </div>
