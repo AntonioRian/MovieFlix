@@ -22,7 +22,12 @@
                     <li><strong>Diretor:</strong> {{filme.Director}}</li>
                     <li><strong>Elenco:</strong> {{filme.Actors}}</li>
                     <li><strong>Avaliações do IMDb:</strong> {{filme.imdbRating}}</li>
-                </ul> <button id="favoriteBtn" class="btn btn-primary" data-id="{{filme.imdbID}}" data-title="{{filme.Title}}" data-poster="{{filme.Poster}}">
+                </ul> 
+                 <button id="favoriteBtn" class="btn btn-primary" 
+                    data-id="{{filme.imdbID}}" 
+                    data-title="{{filme.Title}}" 
+                    data-poster="{{filme.Poster}}"
+                    data-year="{{filme.Year}}"> 
                     Adicionar aos Favoritos
                 </button>
             </div>
