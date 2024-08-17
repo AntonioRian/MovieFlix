@@ -42,3 +42,24 @@ function atualizarEstadoBotaoFavorito() {
 
     botaoFavorito.textContent = isFavorito ? 'Remover dos Favoritos' : 'Adicionar aos Favoritos';
 }
+
+function renderizarFavoritos() { 
+    const favoritosContainer = document.getElementById('favoritos-container');
+    const favoritos = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    if (favoritos.length === 0) {
+        favoritosContainer.innerHTML = '<p class="text-center">Você ainda não tem filmes favoritos.</p>';
+        return;
+    }
+
+        favoritosContainer.innerHTML = favoritos.map(filme => `
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="${filme.poster}" class="card-img-top" alt="Capa do filme ${filme.title}">
+                    <div class="card-body">
+                        <h5 class="card-title"> <a href="/filmes/${filme.id}" class="btn btn-primary">${filme.title} (${filme.year}) </a></h5>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+}
