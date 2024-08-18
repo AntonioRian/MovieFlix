@@ -8,7 +8,7 @@ Esta aplicação foi desenvolvida para integrar com a Open Movie Database (OMDb)
 
 ## MOVIE-FLIX
 
-<img src="src/public/img/Captura de tela de 2024-08-17 08-04-02.png" alt="Captura de tela da aplicação Movie-Flix">
+<img src="src/public/img/Captura de tela Movie-Flix.png" alt="Captura de tela da aplicação Movie-Flix">
 
 ---
 
