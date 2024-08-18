@@ -6,7 +6,8 @@
 
 .card-img-top {
     object-fit: cover;
-    height: 310px; 
+    height: 310px; /* Ou o valor que você definiu anteriormente */
+    width: 100%; /* Garante que a imagem ocupe toda a largura do card */
 }
 
 

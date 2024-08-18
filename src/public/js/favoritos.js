@@ -54,7 +54,9 @@ function renderizarFavoritos() {
         favoritosContainer.innerHTML = favoritos.map(filme => `
             <div class="col-md-3 mb-4">
                 <div class="card">
-                    <img src="${filme.poster}" class="card-img-top" alt="Capa do filme ${filme.title}">
+                    <a href="/filmes/${filme.id}" class="card-img-top">
+                        <img src="${filme.poster}" class="card-img-top" alt="Capa do filme ${filme.title}">
+                    </a>
                     <div class="card-body">
                         <h5 class="card-title"> <a href="/filmes/${filme.id}" class="text-dark">${filme.title} (${filme.year}) </a></h5>
                     </div>
