@@ -1,14 +1,14 @@
 @import url("partials/navbar.css");
 @import url("partials/cards.css");
+@import url("partials/carousel.css");
 
 .button-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; /* Ajuste conforme necessário */
+    margin-top: 20px; 
 }  
 
 .btn {
     padding: 10px 20px;
 }
-
