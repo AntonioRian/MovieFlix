@@ -1,0 +1,20 @@
+// Partial que renderiza os cards dos filmes na página inicial
+
+<div class="container mt-5">
+    <div class="row">
+        {{#each featuredMovies}}
+            <div class="col-md-3 mb-4" >
+                <div class="card">
+                    <a href="/filmes/{{this.imdbID}}" class="card-img-top"> 
+                        <img src="{{this.Poster}}" class="card-img-top" alt="Capa do filme {{this.Title}}">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a href="/filmes/{{this.imdbID}}" class="text-dark">{{this.Title}} ({{this.Year}})</a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
