@@ -1,6 +1,6 @@
 FROM node:latest
 
-WORKDIR /sprint-2-3-pb-aws-julho-a
+WORKDIR /app
 
 COPY package.json .
 
