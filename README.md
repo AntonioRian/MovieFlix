@@ -1,8 +1,8 @@
-# Sprints 2 e 3: Open Movie Database (OMDb) API
+# MovieFlix: Open Movie Database (OMDb) API
 
 Esta aplicação foi desenvolvida para integrar com a Open Movie Database (OMDb) API, fornecendo uma interface para buscar e exibir informações sobre filmes. A aplicação é containerizada usando Docker e implantada na AWS.
 
-**Autores**: Carlos Henrique Rodrigues Paixão, Vamberto Pereira da Silva Junior, Hellen Lima Araujo, Antonio Rian de Jesus Felix.
+**Autores**: Antonio Rian de Jesus Felix, Carlos Henrique Rodrigues Paixão, Vamberto Pereira da Silva Junior, Hellen Lima Araujo.
 
 ---
 

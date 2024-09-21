@@ -1,8 +1,12 @@
+// Carregar variáveis de ambiente do arquivo .env
+require('dotenv').config();
+
 const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 
-const chaveAPI = 'd6eef64b';
+// Obtém a chave da API do arquivo .env
+const chaveAPI = process.env.OMDB_API_KEY;
 
 // Rota para buscar filmes
 router.get('/pesquisar', async (req, res) => {
@@ -14,10 +18,8 @@ router.get('/pesquisar', async (req, res) => {
     }
 
     if (!regex.test(filme)) {
-    return res.render('index', { error: 'O nome do filme deve conter apenas letras, números e espaços, com no mínimo 2 caracteres.' });
+        return res.render('index', { error: 'O nome do filme deve conter apenas letras, números e espaços, com no mínimo 2 caracteres.' });
     }
-
-    
 
     try {
         const response = await axios.get(`http://www.omdbapi.com/?s=${filme}&apikey=${chaveAPI}`);
